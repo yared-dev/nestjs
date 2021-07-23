@@ -7,10 +7,12 @@ import {
   Body,
   Query,
   Param,
+  Res,
 } from '@nestjs/common';
 import { CreateTaskDto } from './dto/create-task.dto';
 import { TasksService } from './tasks.service';
 import { Task } from './interfaces/Task';
+import { Response } from 'express';
 @Controller('tasks')
 export class TasksController {
   constructor(private taskService: TasksService) {}
